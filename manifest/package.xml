@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<Package xmlns="http://soap.sforce.com/2006/04/metadata">
+	<types>
+		<members>vehicalController</members>
+		<name>ApexClass</name>
+	</types>
+	<types>
+		<members>Vehical__c</members>
+		<name>CustomObject</name>
+	</types>
+	<types>
+		<members>multipleVehicle_insert</members>
+		<members>vehicalCreate</members>
+		<name>LightningComponentBundle</name>
+	</types>
+	<version>53.0</version>
+</Package>

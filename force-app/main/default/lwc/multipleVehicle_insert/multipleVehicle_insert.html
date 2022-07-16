@@ -1,0 +1,70 @@
+<template>
+    <lightning-card>
+    <h3 slot="title">
+        <lightning-icon icon-name="standard:account" alternative-text="event" size="5">
+            &nbsp; Add Multiple Vehicals
+        </lightning-icon>
+    </h3>
+
+   
+ <table class="slds-table slds-table_cell-buffer slds-table_bordered ">
+  <thead>
+   <tr class="slds-line-height_reset">
+    <th class="" scope="col">
+        <div class="slds-truncate" title="">S. No</div>
+       </th>
+    <th class="" scope="col">
+     <div class="slds-truncate" title="">Vehical No</div>
+    </th>
+    <th class="" scope="col">
+     <div class="slds-truncate" title="">Vehical Owner</div>
+    </th>
+    <th class="" scope="col">
+     <div class="slds-truncate" title="">Vehical Type</div>
+    </th>
+    <th class="" scope="col">
+        <div class="slds-truncate" title="">Member Ship</div>
+       </th>
+   </tr>
+  </thead>
+  <tbody>
+  
+    <template for:each={vehicalList} for:item="family" for:index="index">
+     <tr key={keyIndex} >
+        <td>{index}</td>
+        <td>
+            <lightning-input name='vehicalNo' access-key={index} id={index} type='text' onchange={changehandler} ></lightning-input>
+        </td>
+
+        <td>
+            <lightning-input name='vehicalOnwer' access-key={index} id={index} type='text' onchange={changehandler} ></lightning-input>
+        </td>
+
+        <td>
+            <lightning-input name='vehicalType' access-key={index} id={index} type='text' onchange={changehandler} ></lightning-input>
+        </td>
+
+        <td>
+            <lightning-input name='MemberShip' access-key={index} id={index} type='text' onchange={changehandler} ></lightning-input>
+        </td>
+
+        <td>
+            <lightning-icon icon-name="action:delete" access-key={index} id={index}  onclick={removeRow} ></lightning-icon>
+            
+        </td>
+     </tr>
+     </template>
+     
+  </tbody>
+ </table>
+
+
+    <div slot="footer">
+        <lightning-button label="Add" variant="brand" onclick={addRow}></lightning-button>
+        &nbsp;
+        <lightning-button label="Save"  variant="brand"  onclick={saveMultipleVehical} >
+
+        </lightning-button>
+    </div>
+    </lightning-card>
+</template>

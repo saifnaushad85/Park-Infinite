@@ -1,0 +1,32 @@
+<template>
+    <lightning-card title="Add Vehilcal">
+
+       
+        <div>
+            <lightning-input type="text" value={vehicalRecord.VehicalNo__c} label="Vehical No"
+                onchange={handleVehicalNoChange}></lightning-input>
+        </div>
+
+        <div>
+            <lightning-input type="text" value={vehicalRecord.Vehical_Owner__c} label="Vehical onwer"
+                onchange={handleVehicalOwnChange}></lightning-input>
+        </div>
+        <div>
+
+        <lightning-checkbox-group name="Checkbox Group"
+                              label="MemberShip"
+                              options={options}
+                              value={value}
+                              onchange={handleChange}></lightning-checkbox-group>
+    <p>Selected Values are: {selectedValues}</p>
+</div>
+
+
+       
+        <p slot="footer">
+            <lightning-button label="save" onclick={handleSaveVehical} variant="brand">
+
+            </lightning-button>
+        </p>
+    </lightning-card>
+</template>
